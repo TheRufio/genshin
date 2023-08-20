@@ -1,0 +1,50 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <link rel="stylesheet" href="{% static 'main/css/style_to_main.css' %}">
+</head>
+<br>
+<h2>Мандрівник</h2>
+<aside>
+    <br>
+    <img alt="Scara" src="{{ hero.hero_img.url }}">
+</aside>
+<div>
+    <br>
+    {{ hero.hero_info }}
+</div>
+<br>
+<h2>Артефакти</h2>
+<div>
+    <br>
+    <table>
+        <tr>
+            <td>Найкращий сет артефактів</td>
+            <td><img class="artefact" src="{{ art_1.art_img.url }}">
+                <br>{{ art_1.art_name }} </td>
+        </tr>
+        <tr>
+            <td rowspan="3">Можливі сети артефактів</td>
+            <td><img class="artefact" src="{{ art_2.art_img.url }}">
+                <br>{{ art_2.art_name}}</td>
+        </tr>
+        <tr>
+            <td><img class="artefact" src="{{ art_3.art_img.url }}">
+                <br>{{ art_3.art_name}}</td>
+        </tr>
+        <tr>
+            <td><img class="artefact" src="{{ art_4.art_img.url }}">
+                <br>{{ art_4.art_name}}</td>
+        </tr>
+    </table>
+    <br>
+    <p>Важливі підстати: Атака, Кріт шанс, Кріт. </p>
+    
+</div>
+<br>
+<h2>Зброя</h2>
+<div>aaa</div>
+
+<table> 
+{% endblock %}

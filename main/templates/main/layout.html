@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Швидкі геншин-гайди українською</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'main/css/style_to_layout.css' %}">
+</head>
+<body>
+    <div class="div_lo">
+        Genshin site
+        <br>
+
+        <input type="text" list="datalist" placeholder="Впишіть ім'я персонажа" id="input">
+        <datalist id="datalist"> 
+            <option value="Мандрівник">
+            <option value="Венті">
+            <option value="Джин">
+            <option value="Кадзуха">
+            <option value="Саю">
+            <option value="Сяо">
+            <option value="Фарузан">
+            <option value="Цукроза">
+            <option value="Хейдзо">
+            <option value="Лінет">
+
+            <option value="Альбедо">
+            <option value="Ітто">
+            <option value="Джонлі">
+            <option value="Ноель">
+            <option value="Нінгуан">
+            <option value="Юнь Дзінь">
+            <option value="Горо">
+                
+            <option value="Єлань">
+            <option value="Барбара">
+            <option value="Аято">
+            <option value="Кандакія"> 
+            <option value="Мона"> 
+            <option value="Кокомі"> 
+            <option value="Сінцю"> 
+            <option value="Тарталья">
+
+            <option value="Аль-Хайтам">
+            <option value="Бай Джу">
+            <option value="Коллей"> 
+            <option value="Кірара"> 
+            <option value="Нагіда"> 
+            <option value="Тігнарі"> 
+            <option value="Яояо">
+
+            <option value="Бейдов">
+            <option value="Дорі"> 
+            <option value="Ке Цин">
+            <option value="Сара"> 
+            <option value="Сайно">
+            <option value="Ліза"> 
+            <option value="Райден">
+            <option value="Рейзор"> 
+            <option value="Фішель">
+            <option value="Яе Міко">
+            <option value="Сінобу">
+
+            <option value="Діона"> 
+            <option value="Еола"> 
+            <option value="Елой">
+            <option value="Аяка"> 
+            <option value="Кая">
+            <option value="Лайла"> 
+            <option value="Розарія">
+            <option value="Чічі">
+            <option value="Чон Юнь">
+            <option value="Ганьюй">
+
+            <option value="Ембер"> 
+            <option value="Беннетт">
+            <option value="Дех'я">
+            <option value="Ділюк">
+            <option value="Йоімія">
+            <option value="Клі">
+            <option value="Сянлін">
+            <option value="Сіньянь">
+            <option value="Тома">
+            <option value="Ху Тао"> 
+            <option value="Яньфей">
+            <option value="Ліні">
+        </datalist>
+        <button id="button" onclick="search()">Знайти</button>
+        
+        <script type="text/javascript">
+            //Получаем элементы input, datalist и button
+            var input = document.getElementById("input");
+            var datalist = document.getElementById("datalist");
+            var button = document.getElementById("button");
+        
+            //Функция для поиска значения input в datalist
+            function search() {
+                //Получаем значение input
+                var value = input.value;
+                //Проверяем, что значение не пустое и есть в datalist
+                if (value && datalist.querySelector("option[value='" + value + "']")) {
+                    //Делаем что-то с value, например, выводим на экран
+                    if (value == 'Мандрівник'){
+                        window.location.assign('wanderer')
+                    }
+                    
+                    
+                } else {
+                    //Выводим сообщение об ошибке
+                    alert("Оберіть персонажа правильно");
+                }
+            }
+        
+        </script>        
+        </div>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

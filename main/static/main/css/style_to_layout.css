@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(240, 199, 150);
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(26, 25, 24);
+    text-align: center;
+    margin-top: 20px;
+}
+
+.div_lo {
+    font-size: 60px;
+    background-color: aliceblue;
+    text-align: center;
+    padding-top: 20px;
+    margin:1px;
+}
+
+button {
+    font-size: 20px;
+}
+
+input {
+    width: 70vw;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size:20px
+}
